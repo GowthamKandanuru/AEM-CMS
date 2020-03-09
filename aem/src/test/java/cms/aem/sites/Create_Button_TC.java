@@ -7,7 +7,7 @@ import org.openqa.selenium.remote.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.*;
-public class Assets {
+public class Create_Button_TC {
 	
 	WebDriver driver;
 	WebDriverWait wait;
