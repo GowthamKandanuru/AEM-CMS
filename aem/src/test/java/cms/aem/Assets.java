@@ -39,7 +39,7 @@ public class Assets {
         driver.findElement(By.xpath("//coral-columnview-item[@data-foundation-collection-item-id='/content/via/us-paramountnetwork']")).click();
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//coral-columnview-item[@data-foundation-picker-collection-item-text='/content/via/us-paramountnetwork/gowtham']"))).click();
         driver.findElement(By.xpath("//button[@class='granite-collection-create foundation-toggleable-control coral3-Button coral3-Button--primary']")).click();
-        driver.findElement(By.xpath("//button[@class='granite-collection-create foundation-toggleable-control coral3-Button coral3-Button--primary is-selected']")).sendKeys(Keys.ENTER);
+        driver.findElement(By.xpath("//a[@class='cq-siteadmin-admin-createpage foundation-collection-action coral-Link coral3-BasicList-item coral3-AnchorList-item']")).click();
     }
 
 }
