@@ -1,4 +1,4 @@
-package cms.aem;
+package cms.aem.sites;
 
 
 import org.openqa.selenium.*;
