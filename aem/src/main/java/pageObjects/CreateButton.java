@@ -19,4 +19,7 @@ public class CreateButton {
 	
 	@FindBy(xpath="//button[@class='granite-collection-create foundation-toggleable-control coral3-Button coral3-Button--primary']")
 	public WebElement create;
+	
+	@FindBy(xpath="//a[@class='cq-siteadmin-admin-createpage foundation-collection-action coral-Link coral3-BasicList-item coral3-AnchorList-item']")
+	public WebElement page;
 }
