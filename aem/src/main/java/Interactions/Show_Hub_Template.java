@@ -49,5 +49,10 @@ public class Show_Hub_Template {
         sh.showhub.click();
         sh.next.click();
         sh.title.sendKeys("Automate_Show_Hub_Tempalate");
+        sh.prddropdown.click();
+        sh.webplex.click();
+        sh.create.click();
+        sh.open.click();
+        System.out.println("title"+" "+driver.getTitle());
 	}
 }
