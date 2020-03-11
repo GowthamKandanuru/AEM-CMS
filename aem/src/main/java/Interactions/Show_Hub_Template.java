@@ -10,8 +10,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import Config.PropertyFile;
-import pageObjects.CreateButton;
-import pageObjects.ShowHubTemplate;
+import PageObjects.CreateButton;
+import PageObjects.ShowHubTemplate;
 
 public class Show_Hub_Template {
 	
