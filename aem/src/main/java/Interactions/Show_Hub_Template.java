@@ -48,5 +48,6 @@ public class Show_Hub_Template {
         js.executeScript("arguments[0].scrollIntoView();",sh.showhub);
         sh.showhub.click();
         sh.next.click();
+        sh.title.sendKeys("Automate_Show_Hub_Tempalate");
 	}
 }
