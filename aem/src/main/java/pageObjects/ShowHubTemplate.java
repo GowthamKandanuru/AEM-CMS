@@ -13,4 +13,7 @@ public class ShowHubTemplate {
 	
 	@FindBy(xpath="//coral-button-label[text()='Next']")
 	public WebElement next;
+	
+	@FindBy(xpath="//input[@name='./jcr:title']")
+	public WebElement title;
 }
