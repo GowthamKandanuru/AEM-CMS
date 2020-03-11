@@ -22,4 +22,6 @@ public class CreateButton {
 	
 	@FindBy(xpath="//a[@class='cq-siteadmin-admin-createpage foundation-collection-action coral-Link coral3-BasicList-item coral3-AnchorList-item']")
 	public WebElement page;
+	
+	/*gowtham*/
 }
