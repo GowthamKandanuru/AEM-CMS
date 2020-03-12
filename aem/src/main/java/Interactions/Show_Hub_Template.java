@@ -1,5 +1,6 @@
 package Interactions;
 
+import java.util.Iterator;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.JavascriptExecutor;
@@ -53,6 +54,13 @@ public class Show_Hub_Template {
         sh.webplex.click();
         sh.create.click();
         sh.open.click();
-        System.out.println("title"+" "+driver.getTitle());
+        String parentwindow = driver.getWindowHandle();
+        Iterator<String> i = driver.getWindowHandles().iterator();
+        while(i.hasNext())
+        {
+        driver.switchTo().window((String) i.next());
+        }
+        wait.until(ExpectedConditions.elementToBeClickable(sh.add)).click();
+        sh.insert.click();
 	}
 }

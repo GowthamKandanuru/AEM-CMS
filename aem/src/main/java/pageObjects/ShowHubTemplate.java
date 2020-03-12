@@ -28,4 +28,10 @@ public class ShowHubTemplate {
 	
 	@FindBy(xpath="//coral-button-label[text()='Open']")
 	public WebElement open;
+	
+	@FindBy(xpath="//div[@data-text='Drag components here']")
+	public WebElement add;
+	
+	@FindBy(xpath="//button[@title='Insert component']")
+	public WebElement insert;
 }
