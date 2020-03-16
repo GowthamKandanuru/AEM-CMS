@@ -34,4 +34,10 @@ public class ShowHubTemplate {
 	
 	@FindBy(xpath="//button[@title='Insert component']")
 	public WebElement insert;
+	
+	@FindBy(xpath="//div[@data-type='Editable'][@title='Featured Content Component']")
+	public WebElement config_fc;
+	
+	@FindBy(xpath="//button[@title='Configure']")
+	public WebElement configure;
 }

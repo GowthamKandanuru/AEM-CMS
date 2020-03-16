@@ -12,25 +12,28 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import Config.PropertyFile;
 import pageObjects.CreateButton;
+import pageObjects.FeaturedContent;
 import pageObjects.ShowHubTemplate;
 
-public class Show_Hub_Template {
+public class Featured_Content {
 	
 	private PropertyFile properties;
 	private WebDriver driver;
 	private WebDriverWait wait;
 	private CreateButton cb;
 	private ShowHubTemplate sh;
+	private FeaturedContent fc;
 	JavascriptExecutor js;
 	
-	public Show_Hub_Template() {
-		
+	public Featured_Content()
+	{
 		properties = new PropertyFile();
 		System.setProperty(properties.getDriver(),properties.getDriverPath());
 		driver = new FirefoxDriver();
         wait = new WebDriverWait(driver,1000);
         cb = PageFactory.initElements(driver,CreateButton.class);
         sh = PageFactory.initElements(driver,ShowHubTemplate.class);
+        fc=  PageFactory.initElements(driver,FeaturedContent.class);
         js = (JavascriptExecutor)driver;
 	}
 	
@@ -63,5 +66,19 @@ public class Show_Hub_Template {
         wait.until(ExpectedConditions.elementToBeClickable(sh.add)).click();
         sh.config_fc.click();
         sh.configure.click();
+        //sh.insert.click();
+	}
+	
+	public void verifyComponent()
+	{
+		fc.manual.click();
+		fc.Image_16_9.click();
+		wait.until(ExpectedConditions.elementToBeClickable(fc.Image_16_9)).sendKeys("/content/dam/gsp/entertainment-assets/test-image/06.jpg");
+		//js.executeScript("window.scrollBy(0,1000)");
+		fc.title.sendKeys("FairyTales");
+		fc.description.sendKeys("Description");
+		wait.until(ExpectedConditions.elementToBeClickable(fc.Image_2_3)).click();
+		wait.until(ExpectedConditions.visibilityOf(fc.Image_2_3)).sendKeys("/content/dam/gsp/entertainment-assets/test-image/09.jpg");
+		wait.until(ExpectedConditions.elementToBeClickable(fc.submit)).click();
 	}
 }
