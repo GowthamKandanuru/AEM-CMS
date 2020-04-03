@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="3" guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <test thread-count="3" name="Qa AEM(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="cms.aem.sites.components.Featured_Content_TC">
+      <class name="cms.aem.sites.webplex.Home_Page_Template_TC">
         <methods>
           <include name="tearDown"/>
+          <include name="createTemplate"/>
           <include name="getResult"/>
-          <include name="validateComponent"/>
           <include name="setUp"/>
-          <include name="init"/>
         </methods>
-      </class> <!-- cms.aem.sites.components.Featured_Content_TC -->
+      </class> <!-- cms.aem.sites.webplex.Home_Page_Template_TC -->
     </classes>
-  </test> <!-- Qa AEM(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

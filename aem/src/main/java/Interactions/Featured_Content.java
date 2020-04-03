@@ -3,40 +3,14 @@ package Interactions;
 import java.util.Iterator;
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import Config.PropertyFile;
+import Utilities.Basic;
 import pageObjects.CreateButton;
-import pageObjects.FeaturedContent;
-import pageObjects.ShowHubTemplate;
 
-public class Featured_Content {
-	
-	private PropertyFile properties;
-	private WebDriver driver;
-	private WebDriverWait wait;
-	private CreateButton cb;
-	private ShowHubTemplate sh;
-	private FeaturedContent fc;
-	JavascriptExecutor js;
-	
-	public Featured_Content()
-	{
-		properties = new PropertyFile();
-		System.setProperty(properties.getDriver(),properties.getDriverPath());
-		driver = new FirefoxDriver();
-        wait = new WebDriverWait(driver,1000);
-        cb = PageFactory.initElements(driver,CreateButton.class);
-        sh = PageFactory.initElements(driver,ShowHubTemplate.class);
-        fc=  PageFactory.initElements(driver,FeaturedContent.class);
-        js = (JavascriptExecutor)driver;
-	}
+
+public class Featured_Content extends Basic{
 	
 	public void create_template()
 	{                             
@@ -67,6 +41,7 @@ public class Featured_Content {
         wait.until(ExpectedConditions.elementToBeClickable(sh.add)).click();
         sh.config_fc.click();
         sh.configure.click();
+        System.out.println(parentwindow);
         //sh.insert.click();
 	}
 	

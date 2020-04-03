@@ -9,7 +9,7 @@ import Utilities.BaseClass;
 public class Show_Hub_Template_TC extends BaseClass {
 	
 	Show_Hub_Template showtemplate;
-
+	
 	@BeforeTest
 	public void init()
 	{

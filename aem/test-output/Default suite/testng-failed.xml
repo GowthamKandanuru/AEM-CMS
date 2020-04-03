@@ -3,13 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="cms.aem.sites.webplex.Show_Hub_Template_TC">
+      <class name="cms.aem.sites.webplex.Home_Page_Template_TC">
         <methods>
+          <include name="tearDown"/>
+          <include name="createTemplate"/>
           <include name="getResult"/>
-          <include name="init"/>
-          <include name="templateCreation"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- cms.aem.sites.webplex.Show_Hub_Template_TC -->
+      </class> <!-- cms.aem.sites.webplex.Home_Page_Template_TC -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

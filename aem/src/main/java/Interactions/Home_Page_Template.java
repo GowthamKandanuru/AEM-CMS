@@ -3,38 +3,15 @@ package Interactions;
 import java.util.Iterator;
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import Config.PropertyFile;
+import Utilities.Basic;
 import pageObjects.CreateButton;
-import pageObjects.HomePageTemplate;
 
-public class Home_Page_Template {
+
+public class Home_Page_Template extends Basic{
 	
-	private PropertyFile properties;
-	private WebDriver driver;
-	private WebDriverWait wait;
-	private CreateButton cb;
-	private HomePageTemplate hp;
-	JavascriptExecutor js;
-	
-	public Home_Page_Template()
-	{
-		properties = new PropertyFile();
-		System.setProperty(properties.getDriver(),properties.getDriverPath());
-		driver = new FirefoxDriver();
-		wait = new WebDriverWait(driver,1000);
-		cb = PageFactory.initElements(driver,CreateButton.class);
-		hp = PageFactory.initElements(driver,HomePageTemplate.class);
-		js = (JavascriptExecutor)driver;
-	}
-	
-	public void createHometemplate()
+	public  void createHometemplate()
 	{
 		driver.get(properties.getUrl());
         driver.manage().window().maximize();
@@ -62,8 +39,5 @@ public class Home_Page_Template {
         wait.until(ExpectedConditions.elementToBeClickable(hp.superhero)).click();
         driver.switchTo().window(parentwindow);
         driver.close();
-    }
-
-	
-	
+    }	
 }

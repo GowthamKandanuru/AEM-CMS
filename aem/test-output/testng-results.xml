@@ -1,82 +1,104 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="4" total="7" passed="3">
+<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="491752" started-at="2020-04-03T10:31:15Z" finished-at="2020-04-03T10:39:27Z">
+  <suite name="Default suite" duration-ms="200" started-at="2020-04-03T18:39:29Z" finished-at="2020-04-03T18:39:29Z">
     <groups>
     </groups>
-    <test name="Qa AEM" duration-ms="491752" started-at="2020-04-03T10:31:15Z" finished-at="2020-04-03T10:39:27Z">
-      <class name="cms.aem.sites.webplex.Show_Hub_Template_TC">
-        <test-method status="PASS" signature="templateCreation()[pri:0, instance:cms.aem.sites.webplex.Show_Hub_Template_TC@2a079c]" name="templateCreation" duration-ms="148038" started-at="2020-04-03T10:36:59Z" finished-at="2020-04-03T10:39:27Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- templateCreation -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:cms.aem.sites.webplex.Show_Hub_Template_TC@2a079c]" name="getResult" is-config="true" duration-ms="1" started-at="2020-04-03T10:39:27Z" finished-at="2020-04-03T10:39:27Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=templateCreation status=SUCCESS method=Show_Hub_Template_TC.templateCreation()[pri:0, instance:cms.aem.sites.webplex.Show_Hub_Template_TC@2a079c] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getResult -->
-      </class> <!-- cms.aem.sites.webplex.Show_Hub_Template_TC -->
+    <test name="Default test" duration-ms="200" started-at="2020-04-03T18:39:29Z" finished-at="2020-04-03T18:39:29Z">
       <class name="cms.aem.sites.webplex.Home_Page_Template_TC">
-        <test-method status="PASS" signature="createTemplate()[pri:0, instance:cms.aem.sites.webplex.Home_Page_Template_TC@100df86]" name="createTemplate" duration-ms="110619" started-at="2020-04-03T10:35:08Z" finished-at="2020-04-03T10:36:58Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createTemplate -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:cms.aem.sites.webplex.Home_Page_Template_TC@100df86]" name="getResult" is-config="true" duration-ms="1" started-at="2020-04-03T10:36:58Z" finished-at="2020-04-03T10:36:59Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=createTemplate status=SUCCESS method=Home_Page_Template_TC.createTemplate()[pri:0, instance:cms.aem.sites.webplex.Home_Page_Template_TC@100df86] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getResult -->
-      </class> <!-- cms.aem.sites.webplex.Home_Page_Template_TC -->
-      <class name="cms.aem.sites.components.Featured_Content_TC">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:cms.aem.sites.components.Featured_Content_TC@dafa95]" name="setUp" is-config="true" duration-ms="696" started-at="2020-04-03T10:31:14Z" finished-at="2020-04-03T10:31:15Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:cms.aem.sites.webplex.Home_Page_Template_TC@6ba0ac]" name="setUp" is-config="true" duration-ms="961" started-at="2020-04-03T18:39:28Z" finished-at="2020-04-03T18:39:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="init()[pri:0, instance:cms.aem.sites.components.Featured_Content_TC@dafa95]" name="init" is-config="true" duration-ms="17629" started-at="2020-04-03T10:31:15Z" finished-at="2020-04-03T10:31:32Z">
+        <test-method status="FAIL" signature="createTemplate()[pri:0, instance:cms.aem.sites.webplex.Home_Page_Template_TC@6ba0ac]" name="createTemplate" duration-ms="37" started-at="2020-04-03T18:39:29Z" finished-at="2020-04-03T18:39:29Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at Interactions.Home_Page_Template.createHometemplate(Home_Page_Template.java:22)
+at cms.aem.sites.webplex.Home_Page_Template_TC.createTemplate(Home_Page_Template_TC.java:17)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="PASS" signature="init()[pri:0, instance:cms.aem.sites.webplex.Home_Page_Template_TC@100df86]" name="init" is-config="true" duration-ms="13107" started-at="2020-04-03T10:31:32Z" finished-at="2020-04-03T10:31:46Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="PASS" signature="init()[pri:0, instance:cms.aem.sites.webplex.Show_Hub_Template_TC@2a079c]" name="init" is-config="true" duration-ms="14815" started-at="2020-04-03T10:31:46Z" finished-at="2020-04-03T10:32:00Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="PASS" signature="validateComponent()[pri:0, instance:cms.aem.sites.components.Featured_Content_TC@dafa95]" name="validateComponent" duration-ms="187063" started-at="2020-04-03T10:32:01Z" finished-at="2020-04-03T10:35:08Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateComponent -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:cms.aem.sites.components.Featured_Content_TC@dafa95]" name="getResult" is-config="true" duration-ms="127" started-at="2020-04-03T10:35:08Z" finished-at="2020-04-03T10:35:08Z">
+        </test-method> <!-- createTemplate -->
+        <test-method status="FAIL" signature="getResult(org.testng.ITestResult)[pri:0, instance:cms.aem.sites.webplex.Home_Page_Template_TC@6ba0ac]" name="getResult" is-config="true" duration-ms="33" started-at="2020-04-03T18:39:29Z" finished-at="2020-04-03T18:39:29Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=validateComponent status=SUCCESS method=Featured_Content_TC.validateComponent()[pri:0, instance:cms.aem.sites.components.Featured_Content_TC@dafa95] output={null}]]]>
+                <![CDATA[[TestResult name=createTemplate status=FAILURE method=Home_Page_Template_TC.createTemplate()[pri:0, instance:cms.aem.sites.webplex.Home_Page_Template_TC@6ba0ac] output={null}]]]>
               </value>
             </param>
           </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at Utilities.BaseClass.getResult(BaseClass.java:46)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:cms.aem.sites.components.Featured_Content_TC@dafa95]" name="tearDown" is-config="true" duration-ms="2187" started-at="2020-04-03T10:39:27Z" finished-at="2020-04-03T10:39:29Z">
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:cms.aem.sites.webplex.Home_Page_Template_TC@6ba0ac]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-04-03T18:39:30Z" finished-at="2020-04-03T18:39:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- cms.aem.sites.components.Featured_Content_TC -->
-    </test> <!-- Qa AEM -->
-  </suite> <!-- Suite -->
+      </class> <!-- cms.aem.sites.webplex.Home_Page_Template_TC -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
