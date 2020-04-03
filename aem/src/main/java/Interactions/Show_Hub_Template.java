@@ -61,7 +61,10 @@ public class Show_Hub_Template {
         driver.switchTo().window((String) i.next());
         }
         wait.until(ExpectedConditions.elementToBeClickable(sh.add)).click();
+        
+       /* sh.insert.click();
         sh.config_fc.click();
-        sh.configure.click();
+        sh.configure.click();*/
+        driver.quit();
 	}
 }

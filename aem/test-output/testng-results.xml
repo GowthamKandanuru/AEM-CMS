@@ -1,21 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="4" total="7" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="190564" started-at="2020-03-16T05:16:14Z" finished-at="2020-03-16T05:19:25Z">
+  <suite name="Suite" duration-ms="491752" started-at="2020-04-03T10:31:15Z" finished-at="2020-04-03T10:39:27Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="190564" started-at="2020-03-16T05:16:14Z" finished-at="2020-03-16T05:19:25Z">
+    <test name="Qa AEM" duration-ms="491752" started-at="2020-04-03T10:31:15Z" finished-at="2020-04-03T10:39:27Z">
+      <class name="cms.aem.sites.webplex.Show_Hub_Template_TC">
+        <test-method status="PASS" signature="templateCreation()[pri:0, instance:cms.aem.sites.webplex.Show_Hub_Template_TC@2a079c]" name="templateCreation" duration-ms="148038" started-at="2020-04-03T10:36:59Z" finished-at="2020-04-03T10:39:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- templateCreation -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:cms.aem.sites.webplex.Show_Hub_Template_TC@2a079c]" name="getResult" is-config="true" duration-ms="1" started-at="2020-04-03T10:39:27Z" finished-at="2020-04-03T10:39:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=templateCreation status=SUCCESS method=Show_Hub_Template_TC.templateCreation()[pri:0, instance:cms.aem.sites.webplex.Show_Hub_Template_TC@2a079c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+      </class> <!-- cms.aem.sites.webplex.Show_Hub_Template_TC -->
+      <class name="cms.aem.sites.webplex.Home_Page_Template_TC">
+        <test-method status="PASS" signature="createTemplate()[pri:0, instance:cms.aem.sites.webplex.Home_Page_Template_TC@100df86]" name="createTemplate" duration-ms="110619" started-at="2020-04-03T10:35:08Z" finished-at="2020-04-03T10:36:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createTemplate -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:cms.aem.sites.webplex.Home_Page_Template_TC@100df86]" name="getResult" is-config="true" duration-ms="1" started-at="2020-04-03T10:36:58Z" finished-at="2020-04-03T10:36:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=createTemplate status=SUCCESS method=Home_Page_Template_TC.createTemplate()[pri:0, instance:cms.aem.sites.webplex.Home_Page_Template_TC@100df86] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+      </class> <!-- cms.aem.sites.webplex.Home_Page_Template_TC -->
       <class name="cms.aem.sites.components.Featured_Content_TC">
-        <test-method status="PASS" signature="init()[pri:0, instance:cms.aem.sites.components.Featured_Content_TC@1629756]" name="init" is-config="true" duration-ms="16388" started-at="2020-03-16T10:46:14Z" finished-at="2020-03-16T10:46:31Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:cms.aem.sites.components.Featured_Content_TC@dafa95]" name="setUp" is-config="true" duration-ms="696" started-at="2020-04-03T10:31:14Z" finished-at="2020-04-03T10:31:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="init()[pri:0, instance:cms.aem.sites.components.Featured_Content_TC@dafa95]" name="init" is-config="true" duration-ms="17629" started-at="2020-04-03T10:31:15Z" finished-at="2020-04-03T10:31:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="verifyFeaturedComponent()[pri:0, instance:cms.aem.sites.components.Featured_Content_TC@1629756]" name="verifyFeaturedComponent" duration-ms="174102" started-at="2020-03-16T10:46:31Z" finished-at="2020-03-16T10:49:25Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:cms.aem.sites.webplex.Home_Page_Template_TC@100df86]" name="init" is-config="true" duration-ms="13107" started-at="2020-04-03T10:31:32Z" finished-at="2020-04-03T10:31:46Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyFeaturedComponent -->
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="init()[pri:0, instance:cms.aem.sites.webplex.Show_Hub_Template_TC@2a079c]" name="init" is-config="true" duration-ms="14815" started-at="2020-04-03T10:31:46Z" finished-at="2020-04-03T10:32:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="validateComponent()[pri:0, instance:cms.aem.sites.components.Featured_Content_TC@dafa95]" name="validateComponent" duration-ms="187063" started-at="2020-04-03T10:32:01Z" finished-at="2020-04-03T10:35:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateComponent -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:cms.aem.sites.components.Featured_Content_TC@dafa95]" name="getResult" is-config="true" duration-ms="127" started-at="2020-04-03T10:35:08Z" finished-at="2020-04-03T10:35:08Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validateComponent status=SUCCESS method=Featured_Content_TC.validateComponent()[pri:0, instance:cms.aem.sites.components.Featured_Content_TC@dafa95] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:cms.aem.sites.components.Featured_Content_TC@dafa95]" name="tearDown" is-config="true" duration-ms="2187" started-at="2020-04-03T10:39:27Z" finished-at="2020-04-03T10:39:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
       </class> <!-- cms.aem.sites.components.Featured_Content_TC -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Qa AEM -->
+  </suite> <!-- Suite -->
 </testng-results>

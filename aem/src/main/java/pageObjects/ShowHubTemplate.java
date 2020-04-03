@@ -39,5 +39,6 @@ public class ShowHubTemplate {
 	public WebElement config_fc;
 	
 	@FindBy(xpath="//button[@title='Configure']")
-	public WebElement configure;
+	public WebElement configure; 
+	
 }

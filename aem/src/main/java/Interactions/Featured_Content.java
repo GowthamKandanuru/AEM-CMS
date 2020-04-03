@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -44,7 +45,6 @@ public class Featured_Content {
         cb = PageFactory.initElements(driver,CreateButton.class);
         wait.until(ExpectedConditions.elementToBeClickable(cb.sites)).click();
         cb.via.click();
-        driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
         cb.paramount.click();
         wait.until(ExpectedConditions.elementToBeClickable(cb.folder)).click();
         cb.create.click();
@@ -52,6 +52,7 @@ public class Featured_Content {
         js.executeScript("arguments[0].scrollIntoView();",sh.showhub);
         sh.showhub.click();
         sh.next.click();
+        driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
         sh.title.sendKeys("Automate_Show_Hub_Tempalate");
         sh.prddropdown.click();
         sh.webplex.click();
@@ -72,13 +73,22 @@ public class Featured_Content {
 	public void verifyComponent()
 	{
 		fc.manual.click();
-		fc.Image_16_9.click();
+		fc.fullscreen.click();
+		wait.until(ExpectedConditions.elementToBeClickable(fc.Image_16_9)).click();
 		wait.until(ExpectedConditions.elementToBeClickable(fc.Image_16_9)).sendKeys("/content/dam/gsp/entertainment-assets/test-image/06.jpg");
-		//js.executeScript("window.scrollBy(0,1000)");
 		fc.title.sendKeys("FairyTales");
 		fc.description.sendKeys("Description");
 		wait.until(ExpectedConditions.elementToBeClickable(fc.Image_2_3)).click();
 		wait.until(ExpectedConditions.visibilityOf(fc.Image_2_3)).sendKeys("/content/dam/gsp/entertainment-assets/test-image/09.jpg");
-		wait.until(ExpectedConditions.elementToBeClickable(fc.submit)).click();
+		fc.Dynamic.click();
+		Actions a= new Actions(driver);
+		a.moveToElement(fc.submit).click().build().perform();
+		System.out.println(fc.border.getText());
+		String s = driver.getCurrentUrl();
+		String s1 = s.replaceAll("/editor.html","");
+		System.out.println(s1.replace("html","model.json"));
+		driver.quit();
+		/*sh.config_fc.click();
+		sh.insert.click();*/
 	}
 }
