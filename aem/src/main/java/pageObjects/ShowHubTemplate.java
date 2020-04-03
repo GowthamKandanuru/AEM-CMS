@@ -16,4 +16,29 @@ public class ShowHubTemplate {
 	
 	@FindBy(xpath="//input[@name='./jcr:title']")
 	public WebElement title;
+	
+	@FindBy(xpath="//button[@class='coral3-Button coral3-Button--secondary coral3-Button--block coral3-Select-button']/span[text()='Select']")
+	public WebElement prddropdown;
+	
+	@FindBy(xpath=" //coral-selectlist-item[text()='WebPlex']")
+	public WebElement webplex;
+	
+	@FindBy(xpath="//button[@type='submit']")
+	public WebElement create;
+	
+	@FindBy(xpath="//coral-button-label[text()='Open']")
+	public WebElement open;
+	
+	@FindBy(xpath="//div[@data-text='Drag components here']")
+	public WebElement add;
+	
+	@FindBy(xpath="//button[@title='Insert component']")
+	public WebElement insert;
+	
+	@FindBy(xpath="//div[@data-type='Editable'][@title='Featured Content Component']")
+	public WebElement config_fc;
+	
+	@FindBy(xpath="//button[@title='Configure']")
+	public WebElement configure; 
+	
 }

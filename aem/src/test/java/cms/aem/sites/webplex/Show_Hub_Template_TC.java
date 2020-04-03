@@ -3,12 +3,13 @@ package cms.aem.sites.webplex;
 import org.testng.annotations.*;
 
 import Interactions.Show_Hub_Template;
+import Utilities.BaseClass;
 
 
-public class Show_Hub_Template_TC {
+public class Show_Hub_Template_TC extends BaseClass {
 	
 	Show_Hub_Template showtemplate;
-	
+
 	@BeforeTest
 	public void init()
 	{
@@ -18,7 +19,9 @@ public class Show_Hub_Template_TC {
 	@Test
 	public void templateCreation()
 	{
+		logger=extent.createTest("Verify showhub page Template");
 		showtemplate.create_template();
+		
 	}
 
 }

@@ -1,7 +1,7 @@
 package cms.aem.sites;
+
 import org.testng.annotations.*;
 import Interactions.Create_Button;
-
 
 public class Create_Button_TC {
 	
@@ -18,10 +18,10 @@ public class Create_Button_TC {
     	cb.create();
     }
     
-   /* @AfterTest
-    public void quit()
-    {
-    	cb.close();
-    }*/
-
+    
+    @AfterTest
+	public void endReport() {
+		
+		cb.close();
+	}
 }

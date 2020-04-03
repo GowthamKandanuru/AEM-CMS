@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite thread-count="3" name="Suite" parallel="tests" >
+    <test name="Qa AEM">
+		<packages>
+	 	<package name="cms.aem.sites.components"/> 
+	 	<package name="cms.aem.sites.webplex"/>
+		</packages>
+	</test>
+		
+	<!--  <test name="Qa">
+		<packages>
+		<package name="cms.aem.sites.webplex"/>
+		</packages>
+	</test> -->
+
+</suite>

@@ -1,5 +1,6 @@
 package Interactions;
 
+import java.util.Iterator;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.JavascriptExecutor;
@@ -34,7 +35,7 @@ public class Show_Hub_Template {
 	}
 	
 	public void create_template()
-	{
+	{                             
 		driver.get(properties.getUrl());
         driver.manage().window().maximize();
         cb = PageFactory.initElements(driver,CreateButton.class);
@@ -49,5 +50,21 @@ public class Show_Hub_Template {
         sh.showhub.click();
         sh.next.click();
         sh.title.sendKeys("Automate_Show_Hub_Tempalate");
+        sh.prddropdown.click();
+        sh.webplex.click();
+        sh.create.click();
+        sh.open.click();
+        String parentwindow = driver.getWindowHandle();
+        Iterator<String> i = driver.getWindowHandles().iterator();
+        while(i.hasNext())
+        {
+        driver.switchTo().window((String) i.next());
+        }
+        wait.until(ExpectedConditions.elementToBeClickable(sh.add)).click();
+        
+       /* sh.insert.click();
+        sh.config_fc.click();
+        sh.configure.click();*/
+        driver.quit();
 	}
 }
