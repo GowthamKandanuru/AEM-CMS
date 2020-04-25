@@ -5,6 +5,7 @@
 		<packages>
 	 	<package name="cms.aem.sites.components"/> 
 	 	<package name="cms.aem.sites.webplex"/>
+	 	<package name="cms.aem.assets"/>
 		</packages>
 	</test>
 		

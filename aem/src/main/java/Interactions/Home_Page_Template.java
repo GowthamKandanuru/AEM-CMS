@@ -5,11 +5,11 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import Utilities.Basic;
+import Utilities.Initialize;
 import pageObjects.CreateButton;
 
 
-public class Home_Page_Template extends Basic{
+public class Home_Page_Template extends Initialize{
 	
 	public  void createHometemplate()
 	{
@@ -36,8 +36,6 @@ public class Home_Page_Template extends Basic{
         {
         driver.switchTo().window((String) i.next());
         }
-        wait.until(ExpectedConditions.elementToBeClickable(hp.superhero)).click();
-        driver.switchTo().window(parentwindow);
-        driver.close();
+        hp.superhero.click();
     }	
 }

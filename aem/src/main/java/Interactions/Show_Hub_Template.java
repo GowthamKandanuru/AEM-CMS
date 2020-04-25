@@ -4,7 +4,8 @@ import java.util.Iterator;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import Utilities.Basic;
+
+import Utilities.Initialize;
 import pageObjects.CreateButton;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -12,13 +13,12 @@ import Config.PropertyFile;
 import pageObjects.CreateButton;
 
 
-public class Show_Hub_Template extends Basic {
+public class Show_Hub_Template extends Initialize {
 	
 	public void create_template()
 	{                             
 		driver.get(properties.getUrl());
         driver.manage().window().maximize();
-        cb = PageFactory.initElements(driver,CreateButton.class);
         wait.until(ExpectedConditions.elementToBeClickable(cb.sites)).click();
         cb.via.click();
         driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
@@ -41,7 +41,6 @@ public class Show_Hub_Template extends Basic {
         driver.switchTo().window((String) i.next());
         }
         wait.until(ExpectedConditions.elementToBeClickable(sh.add)).click();
-        driver.quit();
        /* sh.insert.click();
         sh.config_fc.click();
         sh.configure.click();*/

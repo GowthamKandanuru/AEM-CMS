@@ -2,21 +2,16 @@ package Interactions;
 
 import java.util.Iterator;
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import Utilities.Basic;
-import pageObjects.CreateButton;
+import Utilities.Initialize;
 
-
-public class Featured_Content extends Basic{
+public class Featured_Content extends Initialize{
 	
 	public void create_template()
 	{                             
 		driver.get(properties.getUrl());
         driver.manage().window().maximize();
-        cb = PageFactory.initElements(driver,CreateButton.class);
         wait.until(ExpectedConditions.elementToBeClickable(cb.sites)).click();
         cb.via.click();
         cb.paramount.click();
@@ -62,7 +57,6 @@ public class Featured_Content extends Basic{
 		String s = driver.getCurrentUrl();
 		String s1 = s.replaceAll("/editor.html","");
 		System.out.println(s1.replace("html","model.json"));
-		driver.quit();
 		/*sh.config_fc.click();
 		sh.insert.click();*/
 	}
