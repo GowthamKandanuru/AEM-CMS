@@ -4,16 +4,13 @@ import java.util.Iterator;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-<<<<<<< HEAD
 import Utilities.Basic;
 import pageObjects.CreateButton;
-=======
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import Config.PropertyFile;
-import PageObjects.CreateButton;
-import PageObjects.ShowHubTemplate;
->>>>>>> origin/tarzan
+import pageObjects.CreateButton;
+
 
 public class Show_Hub_Template extends Basic {
 	
