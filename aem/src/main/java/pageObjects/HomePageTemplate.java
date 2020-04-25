@@ -11,7 +11,7 @@ public class HomePageTemplate {
 	@FindBy(xpath="//a[@class='cq-siteadmin-admin-createpage foundation-collection-action coral-Link coral3-BasicList-item coral3-AnchorList-item']")
 	public WebElement page;
 	
-	@FindBy(xpath="//div[@title='Superhero Component [Root]']")
+	@FindBy(xpath="//div[@title='Superhero Component']")
 	public WebElement superhero;
 	
 	@FindBy(xpath="//coral-button-label[text()='Next']")

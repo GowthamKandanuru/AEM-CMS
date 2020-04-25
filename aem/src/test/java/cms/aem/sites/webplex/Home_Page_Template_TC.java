@@ -19,7 +19,7 @@ public class Home_Page_Template_TC extends BaseClass {
 	@Test
 	public void createTemplate()
 	{
-		hc.createHometemplate();
 		logger = extent.createTest("creation of Home page Template","testing creation of home page template");
+		hc.createHometemplate();
 	}
 }

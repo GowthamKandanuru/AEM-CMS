@@ -1,6 +1,6 @@
 package Utilities;
 
-import org.openqa.selenium.WebDriver;
+
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -13,7 +13,6 @@ import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
-
 
 public class BaseClass {
 	
@@ -28,7 +27,6 @@ public class BaseClass {
 	        htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir") +"/test-output/TestReport.html");
 	        extent = new ExtentReports();
 	        extent.attachReporter(htmlReporter);
-	         
 	        extent.setSystemInfo("OS", "Windows");
 	        extent.setSystemInfo("URL", "https://qa-cms.viacom.com");
 	        extent.setSystemInfo("Environment", "QA");
